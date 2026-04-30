@@ -1,8 +1,12 @@
 name: Build Fabric Mod
 
-on: [push, pull_request]
-
-jobs:
+on:
+  push:
+    branches: [ "main" ] # Или твоя основная ветка
+  pull_request:
+    branches: [ "main" ]
+  workflow_dispatch:      # <--- Добавь эту строку! Это и есть кнопка
+    jobs:
   build:
     runs-on: ubuntu-latest
     steps:
