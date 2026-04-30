@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "id": "swinganimation",
+  "version": "1.21.4-fixed",
+  "name": "Swing Animation (Fixed)",
+  "description": "Adds smooth swing animations. FIXED: Items no longer go behind head when eating/using.",
+  "authors": [
+    "Anomalith",
+    "Claude (Fix)"
+  ],
+  "contact": {
+    "sources": "https://github.com/anomalith/swinganimation"
+  },
+  "license": "MIT",
+  "icon": "assets/swinganimation/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "main": [
+      "com.anomalith.Swinganimation"
+    ],
+    "client": [
+      "com.anomalith.SwinganimationClient"
+    ]
+  },
+  "mixins": [
+    "swinganimation.mixins.json",
+    "swinganimation.client.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.16.0",
+    "minecraft": "~1.21.4",
+    "java": ">=21",
+    "fabric-api": "*"
+  },
+  "suggests": {
+    "modmenu": "*"
+  },
+  "custom": {
+    "modmenu": {
+      "badges": ["client"],
+      "update_checker": false
+    }
+  }
+}
